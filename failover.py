@@ -21,7 +21,7 @@ def failover_test(t):
 
       counter = i
 
-      print 'Counter:', counter
+      print("============ " + str(counter) + "/" + sys.argv[1] + "  ================")
     
       dbconfig = read_db_config()
 
@@ -45,9 +45,7 @@ def failover_test(t):
       conn.close()
 
   except Error as e:
-    print("something went wrong!")
-    print(e)
-    print 'Current counter:',counter
+    print"Something went wrong:",e
     time.sleep(3)
     failover_test(counter)
     
