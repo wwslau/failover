@@ -1,6 +1,10 @@
 # failover
 
-python failover.py 100
+python select.py 100
+python insert.py 100
+python delete.py 100
+
+python total.py 100
 
 where 100 is number of times to run
 
